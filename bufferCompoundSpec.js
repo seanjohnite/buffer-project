@@ -1,10 +1,11 @@
 describe('Buffer maker - ', function () {
 
 	beforeEach(function() {
-		buffer = new Buffer();
+		buffer = new Buffer(1);
 	});
 
 	it('Buffer is a constructor', function () {
+
 		expect(buffer instanceof Buffer).toBeTruthy();
 	});
 
@@ -13,12 +14,7 @@ describe('Buffer maker - ', function () {
 		expect(compound instanceof Compound).toBeTruthy();
 	});
 
-	it('Compound parses an input compound string and stores a Compound', function () {
-		var compound = new Compound('NaCl')
-		expect(buffer instanceof Buffer).toBeTruthy();
-	});
-
-	it('Compound stores the identity of the compound along with its molecular weight', function () {
+	it('Compound stores the identity of the compound along with its molecular weight in grams per mole', function () {
 		var compound1 = new Compound('NaCl');
 		var compound2 = new Compound('C8H8O');
 		var compound3 = new Compound('CH3CH(CH3)CH3');
@@ -27,6 +23,7 @@ describe('Buffer maker - ', function () {
 		expect(compound1.molecularWeight).toEqual(58.44);
 		expect(compound2.formula).toEqual('C8H8O');
 		expect(compound2.molecularWeight).toEqual(120.15);
+		expect(compound2.mWunits).toEqual('grams/mol');
 		expect(compound3.molecularWeight).toEqual(58.12);
 		expect(compound4.molecularWeight).toEqual(394.31);
 	});
