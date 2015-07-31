@@ -1,11 +1,12 @@
 describe('Buffer maker - ', function () {
 
 	beforeEach(function() {
-		buffer = new Buffer(1);
+		buffer = new Buffer(1, 'L');
 	});
 
-	it('Buffer is a constructor', function () {
-
+	it('Buffer is a constructor and has volume and volume units', function () {
+		expect(buffer.volume.value).toEqual(1);
+		expect(buffer.volume.units).toEqual('L');
 		expect(buffer instanceof Buffer).toBeTruthy();
 	});
 
