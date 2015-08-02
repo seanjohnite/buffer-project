@@ -1,7 +1,11 @@
 
 
+- option for either stock concentration or 
+- list form for recipe entry
 - text box for recipe entry
 - pregenerated buffer recipes
-- display structures of buffer recipes
 - generate printable sheet for making buffers
 - login to save buffer recipes
+
+
+- display structures of buffer recipes
