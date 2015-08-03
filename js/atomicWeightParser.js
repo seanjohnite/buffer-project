@@ -3,7 +3,7 @@ var fs = require('fs');
 
 function atomicParse(){
   var atomicTable = [];
-  fs.readFile('pt-data1.csv',function(err, data) {
+  fs.readFile('../static/csv/pt-data1.csv',function(err, data) {
     if(err){
       throw new Error(err);
     }
